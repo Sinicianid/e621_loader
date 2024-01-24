@@ -13,7 +13,7 @@ os.chdir('oral')
 api = E621(("", "")) # it's should be (("name", "API_key")) // go to https://e621.net/users/home/api_key/view
 posts = api.posts.search("") #tags here like a "tag tag -tag" or you can ["tag", "tag", "-tag"] OwO
 
-for post in posts:
+for post in posts: #Проверяет формат и присваивает название с соответствующим форматом
     print("Загружаю..." + Fore.BLUE)
     get_post = post.file_obj.url
     resource = req.get(get_post)
